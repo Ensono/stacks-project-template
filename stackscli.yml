@@ -1,24 +1,23 @@
-
 # Configure the framework that is going to be used
-framework:
-  {{ if eq .Project.Framework.Type "dotnet" }}
-  name: dotnet
-  commands:
-    - name: dotnet
-      version: "> 6.0, < 6.1"
-  {{ end }}
-  {{ if eq .Project.Framework.Type "dotnet" }}
-  name: java
-  commands:
-    - name: java
-      version: ">= 11"
-  {{ end }}
-  {{ if eq .Project.Framework.Type "node" }}
-  name: node
-  commands:
-    - name: node
-      version: ">= 18.3"
-  {{ end }}
+# framework:
+#   {{ if eq .Project.Framework.Type "dotnet" }}
+#   name: dotnet
+#   commands:
+#     - name: dotnet
+#       version: "> 6.0, < 6.1"
+#   {{ end }}
+#   {{ if eq .Project.Framework.Type "dotnet" }}
+#   name: java
+#   commands:
+#     - name: java
+#       version: ">= 11"
+#   {{ end }}
+#   {{ if eq .Project.Framework.Type "node" }}
+#   name: node
+#   commands:
+#     - name: node
+#       version: ">= 18.3"
+#   {{ end }}
 
 # Pipeline files
 pipeline:
@@ -33,7 +32,6 @@ pipeline:
         path: cicd/scaffold/azdo/pipeline-vars.yml
 
   - type: gha
-
 
 setup:
   operations:
